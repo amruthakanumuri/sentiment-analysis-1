@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+
+{% block head %}
+<title>Sentiment analysis</title>
+<style>
+    body{
+        padding: 10px;
+    }
+    h1{
+        color:white;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+<h1 class="alert alert-dark" >Analyze The Review </h1>
+<form action="/review" method="POST" enctype="multipart/form-data">
+<textarea name="text" id="content">
+</textarea><br><br>
+<input type="submit" value="sentiment" class="btn btn-primary" />
+</form>
+{% endblock %}
